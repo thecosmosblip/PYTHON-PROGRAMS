@@ -1,0 +1,122 @@
+PYTHON PROGRAMS
+
+1] Find the average of n numbers.
+Solution:
+Numbers = int(input('How many numbers do you want: '))
+Total_sum = 0
+
+for i in range(Numbers):
+    num = int(input('Enter the Number: '))
+    Total_sum += num
+
+avg = Total_sum / Numbers
+
+print('avg of numbers is ', avg)
+
+2] How to sum first N positive integers.
+Solution:
+n = int(input('Enter the Number: '))
+
+total = (n * (n+1))/2
+
+print(total)
+
+3] How to get time of python program execution.
+Solution:
+import time
+
+def my_func():
+    start_time = time.time()
+    s = 0
+    for i in range(1, n+1):
+        s = s + i
+    end_time = time.time()
+
+    return s, start_time-end_time
+
+n = 5
+
+print(my_func())
+
+4] How to get current username in Python.
+Solution:
+import getpass
+
+print(getpass.getuser())
+
+
+5] How to access environment variable in Python.
+Solution:
+import getpass
+
+print(getpass.getuser())
+
+
+6] How to find out which python version you are using.
+Solution:
+import sys
+print('PYTHON VERSION')
+print(sys.version)
+print(sys.version_info)
+
+
+7] How to print current data and time.
+Solution:
+import datetime
+
+print('Current date and time is')
+now = datetime.datetime.now()
+print(now.strftime('%y-%m-%d %H-%M-%S'))
+
+8] How to find area of circle.
+Solution:
+from math import pi
+R = int(input('Enter the radius of the circle: '))
+Area = pi * R**2
+
+print('Area of the circel is ', Area)
+9] Linear Search.
+Solution:
+Using while loop:
+pos = -1
+
+def linear(list,n):
+    i =0
+    while i < len(list):
+        if list[i] == n:
+            globals()['pos'] = i
+            return True
+           
+        i = i+1
+
+list = [1,2,3,4,5]
+n = 7
+
+if linear(list,n):
+    print('Yes found',pos)
+else:
+    print('Not found')
+
+Using For loop:
+
+pos = -1
+
+def linear(list,n):
+    i =0
+    for i in list:
+        if i < len(list):
+            if list[i] == n:
+                globals()['pos'] = i
+                return True
+            else:
+                return False
+        i = i+1
+
+list = [1,2,3,4,5]
+n = 6
+
+if linear(list,n):
+    print('Yes found', pos)
+else:
+    print('Not found')
+
